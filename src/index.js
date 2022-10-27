@@ -3,11 +3,16 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {Busqueda} from './Busqueda';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <App nombre="alexis" edad="18">
+      prueba
+    </App>
+    <App nombre="edy brok" edad="26"/>
+    <Busqueda/>
   </React.StrictMode>
 );
 
