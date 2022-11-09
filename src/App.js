@@ -1,24 +1,65 @@
 import logo from './logo.svg';
 import './App.css';
+// import { Busqueda } from './Busqueda';
+import a from 'react';
+import React from 'react';
+import AgregaContacto from './AgregaContacto';
+import Contacto from './Contacto';
+import ListaContactos from './ListaContactos';
+import Busqueda from './Busqueda';
 
 function App(props) {
-  let mivariable=parseInt(props.edad)
-  let mensaje="";
-  if(mivariable>20){
-    mensaje="es mayor de edad"
+  let contactos = [
+    {
+    nombre: "alexis",
+    telefono: "322569745",
+    correo: "dfbisd@jghfso.com"
+  },
+  {
+    nombre: "Marcelo",
+    telefono: "322156564",
+    correo: "shbvd@jghfso.com"
+  },
+  {
+    nombre: "fabian",
+    telefono: "322615894",
+    correo: "khvbdshv@jghfso.com"
+  }]
+
+  let [textoBusqueda, setTextoBusqueda] = React.useState('');
+  let contactosFiltrados=[];
+
+  if (textoBusqueda.length > 0) {
+    let textoBusquedaLowerCase=textoBusqueda.toLowerCase();
+
+    contactosFiltrados=contactos.filter((contacto)=>{
+      return contacto.nombre.toLowerCase().includes(textoBusquedaLowerCase);
+    })
   }
-  else{
-    mensaje="es menor de edad"
+  else {
+    contactosFiltrados=contactos;
   }
-  if(mivariable<20){
-    mivariable=0
-  }
+
   return (
-    <di>
-      <h1>hola {props.nombre} tu edad es {mivariable} años {mensaje}</h1>
-      <h2>{props.children}</h2>
-      <div>solo funciona una etiqueta</div>
-    </di>
+    <React.Fragment>
+      <h1>Mis contactos</h1>
+      <Busqueda textoBusqueda={textoBusqueda} setTextoBusqueda={setTextoBusqueda} />
+      <ListaContactos>
+        {
+          contactosFiltrados.map((contacto) => {
+            return (
+              <Contacto
+                nombre={contacto.nombre}
+                telefono={contacto.telefono}
+                correo={contacto.correo}
+              />
+            )
+          })
+        }
+
+      </ListaContactos>
+      <AgregaContacto />
+    </React.Fragment>
   );
 }
 

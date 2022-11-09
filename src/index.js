@@ -5,14 +5,11 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {Busqueda} from './Busqueda';
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App nombre="alexis" edad="18">
-      prueba
-    </App>
-    <App nombre="edy brok" edad="26"/>
-    <Busqueda/>
+    <App/>
   </React.StrictMode>
 );
 
