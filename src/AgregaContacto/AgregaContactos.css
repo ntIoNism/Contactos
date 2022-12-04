@@ -1,0 +1,62 @@
+.button {
+    display: flex;
+    /* display: none; */
+    margin: 0;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 255, 0.164);
+}
+.button .inpt3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40vh;
+    width: 20vw;
+    background-color: #D6E4E5;
+    border: none;
+    flex-direction: column;
+    border-radius: 10px;
+}
+.button .inpt3 .titulo1{
+    color: #497174;
+}
+
+.button .inpt3 .botones {
+    height: 12%;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+button{
+    cursor: pointer; 
+    border: none;
+    border-radius: 10px;
+}
+.button .inpt3 .botones .Agregar{
+    transition: all 0.5s ease;
+
+    background-color: #497174;
+    color: #D6E4E5;
+
+}
+.button .inpt3 .botones .Agregar:hover{
+    background: #EB6440;
+    color: #EFF5F5;
+}
+.button .inpt3 .botones .Canselar{
+    transition: all 0.5s ease;
+    background-color: #EB6440;
+    color: #EFF5F5;
+}
+.button .inpt3 .botones .Canselar:hover{
+    background-color: #497174;
+    color: #D6E4E5;
+}
+input{
+    color: #497174;
+    border-radius: 10px;
+    border: none;
+}

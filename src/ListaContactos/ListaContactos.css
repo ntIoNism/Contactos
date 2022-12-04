@@ -1,0 +1,11 @@
+.contactoslis{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 2vh;
+    height: 50vh;
+    border-radius: 10px;
+    justify-content: space-between;
+    text-align: center;
+    background-color: #EB6440;;
+}

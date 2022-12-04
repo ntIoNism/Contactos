@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+.titulo{
+  color: #497174;
+  display: flex;
+  position: relative;
+  text-align: center;
+  height: 7vh;
+}
+.SetAgregar{
+  background-color: firebrick;
+}

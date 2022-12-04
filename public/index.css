@@ -1,0 +1,18 @@
+* {
+    padding: 1vh;
+    margin: 0;
+    font-family: 
+    Arial, Helvetica, sans-serif;
+    color: #e2eaeb;
+}
+:root{
+    --back-color:#EFF5F5;
+}
+body{
+    background-color: var(--back-color);
+}
+.root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

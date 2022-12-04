@@ -1,12 +1,18 @@
 import React from "react";
 import './Busqueda.css';
-function Busqueda(props) {
+import { DirectorioContext } from "../Context/DirectorioProvider";
+function Busqueda() {
+
+    const {textoBusqueda,setTextoBusqueda}=React.useContext(DirectorioContext);
+
     function onBusquedaChange(event) {
-        props.setTextoBusqueda(event.target.value);
+        setTextoBusqueda(event.target.value);
     }
     return (
         <React.Fragment>
-            <input onChange={onBusquedaChange}></input>
+            <div className="texto">
+              <input className="imput" onChange={onBusquedaChange} value={textoBusqueda}></input>  
+            </div>
         </React.Fragment>
     );
 }

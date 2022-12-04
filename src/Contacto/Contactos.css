@@ -1,0 +1,9 @@
+.contactos{
+    padding: 3vh;
+    border-radius: 10px;
+    background-color: #497174;
+}
+
+.contactos .space{
+    padding: 1vh;
+}

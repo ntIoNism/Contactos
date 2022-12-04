@@ -1,0 +1,17 @@
+.borrar{
+    transition: all 0.5s ease;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #D6E4E5;
+    color: #497174;
+}
+.borrar:hover{
+    color: #D6E4E5;
+    background-color: #EB6440;
+}
+
+.texto .imput{
+    border-radius: 5px;
+    color: #497174;
+}
